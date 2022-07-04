@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header,
+section,
+footer {
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  font-size: 15px;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  background: hsl(240, 78%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+button {
+  cursor: pointer;
+}
+button,
+input,
+select,
+textarea {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:root {
+  --appLinearGradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+  padding-top: 2rem;
+}
+.container .title {
+  color: hsl(233, 13%, 49%);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.container .toggle {
+  margin-bottom: 5rem;
+  color: hsl(234, 14%, 74%);
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .toggle .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.container .toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: -0.5rem;
+}
+.container .toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.container .toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: linear-gradient(to right, var(--appLinearGradient));
+}
+.container .toggle .slider:hover {
+  opacity: 0.7;
+}
+.container .toggle .slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  right: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.container .toggle input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.container .toggle input:checked + .slider:before {
+  -webkit-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+}
+.container .toggle .slider.round {
+  border-radius: 34px;
+}
+.container .toggle .slider.round:before {
+  border-radius: 50%;
+}
+.container .wrapper {
+  display: flex;
+  justify-content: center;
+  height: 437px;
+}
+.container .wrapper .col {
+  max-width: 353px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2rem;
+}
+.container .wrapper .col .col_title {
+  color: hsl(233, 13%, 49%);
+  margin-bottom: 1rem;
+}
+.container .wrapper .col .price {
+  font-size: 4rem;
+  color: hsl(232, 13%, 33%);
+  margin-bottom: 2rem;
+}
+.container .wrapper .col .price span {
+  font-size: 2rem;
+  margin-top: -1rem;
+}
+.container .wrapper .col .description {
+  margin-bottom: 2rem;
+}
+.container .wrapper .col .description hr {
+  border: 1px solid hsl(234, 14%, 74%);
+}
+.container .wrapper .col .description .row {
+  color: hsl(233, 13%, 49%);
+  margin: 1rem 0;
+  position: relative;
+}
+.container .wrapper .col .butn button {
+  background: linear-gradient(to right, var(--appLinearGradient));
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 290px;
+  height: 35px;
+  border-radius: 5px;
+}
+.container .wrapper .col .butn button:hover {
+  background: transparent;
+  border: 1px solid rebeccapurple;
+  transition: 0.3s all ease;
+  color: rebeccapurple;
+}
+.container .wrapper .bg {
+  background: linear-gradient(to right, var(--appLinearGradient));
+  height: 500px;
+  margin-top: -2rem;
+  padding-top: 4rem;
+}
+.container .wrapper .bg .col_title {
+  color: hsl(240, 78%, 98%);
+}
+.container .wrapper .bg .price {
+  color: hsl(240, 78%, 98%);
+}
+.container .wrapper .bg .description .row {
+  color: hsl(240, 78%, 98%);
+}
+.container .wrapper .bg .butn button {
+  color: rebeccapurple;
+  font-weight: 700;
+  background: hsl(240, 78%, 98%);
+}
+.container .wrapper .bg .butn button:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  transition: 0.3s all ease;
+  color: #fff;
+}
